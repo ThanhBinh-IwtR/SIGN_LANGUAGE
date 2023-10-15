@@ -36,3 +36,6 @@ body{
     color: white;
 }
 
+.flipped-video {
+    transform: scaleX(-1);
+}

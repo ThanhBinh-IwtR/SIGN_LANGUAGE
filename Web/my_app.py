@@ -1,43 +1,55 @@
-# from flask import Flask
-from flask import Flask, render_template,Response
+
+from flask import Flask, render_template,Response, jsonify, request
 import cv2
+import os
 
 app = Flask(__name__)
-camera=cv2.VideoCapture(0)
 
-def generate_frames():
+UPLOAD_FOLDER = 'uploads'
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+
+# Kiểm tra xem thư mục tồn tại, nếu không thì tạo nó
+if not os.path.exists(UPLOAD_FOLDER):
+    os.makedirs(UPLOAD_FOLDER)
+
+def gen():
+    cap = cv2.VideoCapture(0)
     while True:
-        success,frame=camera.read()
-        if not success:
+        ret, frame = cap.read()
+        if not ret:
             break
-        else:
-            ret,buffer=cv2.imencode('.jpg',frame)
-            frame=buffer.tobytes()
-        yield(b'--frame\r\n' b'Content_Type: image/jpeg\r\n\r\n' + frame +b'\r\n')
+        _, buffer = cv2.imencode('.jpg', frame)
+        frame = buffer.tobytes()
+        yield (b'--frame\r\n'
+                b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
              
 @app.route("/")
 def demo():
     return render_template("demo.html")
 
-@app.route("/video")
-def video():
-    return Response(generate_frames(),mimetype='multipart/x-mixed-replace; boundary=frame')
-    # Mở camera
-    # cap = cv2.VideoCapture(0)
+@app.route('/video_feed')
+def video_feed():
+    return Response(gen(),
+                    mimetype='multipart/x-mixed-replace; boundary=frame')
 
-    # Lấy ảnh từ camera
-    # stream = cv2.VideoStream(cap).start()
+@app.route('/')
+def home():
+    return render_template('upload.html')
 
-    # Lưu ảnh vào tệp
-    # while True:
-    #     # Lấy một khung từ camera
-    #     ret, frame = cap.read()
-    #     jpg_encoded = cv2.imencode(".jpg", frame)[1].tostring()
-    #     # Xử lý khung
-    #     # ...
+@app.route('/upload', methods=['POST'])
+def upload_file():
+    if 'file' not in request.files:
+        return "Không có phần tệp nào được chọn."
 
-    #     # Trả về khung
-    #     yield (b'--frame\r\n' b'Content-Type: image/jpeg\r\n\r\n' + jpg_encoded + b'\r\n')
+    file = request.files['file']
+
+    if file.filename == '':
+        return "Không có tên tệp nào được chọn."
+
+    if file:
+        filename = os.path.join(app.config['UPLOAD_FOLDER'], file.filename)
+        file.save(filename)
+        return jsonify({'message': f"Tệp {file.filename} đã được tải lên và lưu trữ trong thư mục {UPLOAD_FOLDER}."})
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', debug=True)
+    app.run( debug=True)
