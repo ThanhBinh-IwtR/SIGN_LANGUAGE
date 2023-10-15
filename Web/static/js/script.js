@@ -95,7 +95,8 @@ function uploadFile() {
 
     xhr.onload = function() {
         if (xhr.status === 200) {
-            document.getElementById('result').innerHTML = "Tệp đã được tải lên và lưu trữ.";
+            
+            document.getElementById('result').value = xhr.responseText;
         } else {
             document.getElementById('result').innerHTML = "Có lỗi xảy ra khi tải lên tệp.";
         }

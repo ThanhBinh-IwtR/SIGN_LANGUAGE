@@ -14,14 +14,14 @@
     </div>
     <div class="strvideo">
         <video id="video"  class="flipped-video" autoplay></video>
-        
+        <textarea readonly name="translate" id="result" cols="30" rows="20"></textarea>
     </div>
     <div class="bg">    
         <button id="record" disabled>Start Record</button>
         <button id="stopRecord" disabled>Stop Record</button>
         <canvas id="canvas" style="display: none;"></canvas>
         <form id="upload-form">
-            <input type="file" id="file" name="file" accept=".webm">
+            <input type="file" id="file" name="file" accept=".webm, .mp4">
             <input type="button" value="Tải lên" onclick="uploadFile()">
         </form>
         
