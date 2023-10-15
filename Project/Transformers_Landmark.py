@@ -20,7 +20,7 @@ import json
 SEED = 42
 # Number of Frames to resize recording to
 N_TARGET_FRAMES = 128
-fol_name = 'statics'
+fol_name = './Project/statics'
 with open(fol_name+'/character_to_prediction_index.json') as json_file:
     CHAR2ORD = json.load(json_file)
 SOS_TOKEN = len(CHAR2ORD) + 1 # Start Of Sentence

@@ -39,3 +39,7 @@ button{
 .flipped-video {
     transform: scaleX(-1);
 }
+
+textarea {
+    resize: none;
+  }

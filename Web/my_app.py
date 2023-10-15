@@ -2,10 +2,13 @@
 from flask import Flask, render_template,Response, jsonify, request
 import cv2
 import os
+import sys
+sys.path.insert(0, "D:/AI/DPLS2L/S2L/Project")
+import web_detect
 
 app = Flask(__name__)
 
-UPLOAD_FOLDER = 'uploads'
+UPLOAD_FOLDER = 'upload'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 # Kiểm tra xem thư mục tồn tại, nếu không thì tạo nó
@@ -32,9 +35,7 @@ def video_feed():
     return Response(gen(),
                     mimetype='multipart/x-mixed-replace; boundary=frame')
 
-@app.route('/')
-def home():
-    return render_template('upload.html')
+
 
 @app.route('/upload', methods=['POST'])
 def upload_file():
@@ -44,12 +45,13 @@ def upload_file():
     file = request.files['file']
 
     if file.filename == '':
-        return "Không có tên tệp nào được chọn."
+        return "Chưa chọn file."
 
     if file:
-        filename = os.path.join(app.config['UPLOAD_FOLDER'], file.filename)
-        file.save(filename)
-        return jsonify({'message': f"Tệp {file.filename} đã được tải lên và lưu trữ trong thư mục {UPLOAD_FOLDER}."})
+        file.save('upload/' + file.filename)
+        result = web_detect.read_file_import('upload/' + file.filename)
+        return result
+
 
 if __name__ == "__main__":
     app.run( debug=True)
