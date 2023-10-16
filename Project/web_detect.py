@@ -10,7 +10,7 @@ x = np.load('project/statics/start_up.npy')
 start_up = predict(model,x)
 print("START UP", start_up)
 # Khởi tạo Holistic
-def read_file_import(file_path):  
+def predict_video(file_path):  
     cap = cv2.VideoCapture(file_path)
     sequence =  []
     res = ''

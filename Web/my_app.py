@@ -11,7 +11,6 @@ app = Flask(__name__)
 UPLOAD_FOLDER = 'upload'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
-# Kiểm tra xem thư mục tồn tại, nếu không thì tạo nó
 if not os.path.exists(UPLOAD_FOLDER):
     os.makedirs(UPLOAD_FOLDER)
 
@@ -49,7 +48,7 @@ def upload_file():
 
     if file:
         file.save('upload/' + file.filename)
-        result = web_detect.read_file_import('upload/' + file.filename)
+        result = web_detect.predict_video('upload/' + file.filename)
         return result
 
 
