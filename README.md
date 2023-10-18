@@ -36,8 +36,10 @@ Each path will is a parquet file containing a pandas dataframe with the shape of
 
 This 1630 landmark extract in image by using [MediaPipe](https://google.github.io/mediapipe/solutions/hands.html) and [OpenCV](https://opencv.org/). We only using landmarks from 2 hands and lip.
 
-[This image illustrates the 21 keypoints on the hand]
 ![This image illustrates the 21 keypoints on the hand](hand_landmarks.png)
+*This image illustrates the 21 keypoints on the hand*
+![2 hands and lip landmarks](handsnlip_landmarks.png)
+*This image illustrates the two hands and lip landmarks. There are also come from the parquet file.*
 #### EDA 
 #### Preprocessing
 
