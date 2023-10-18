@@ -44,12 +44,12 @@ A parquet/landmarks file containing a pandas dataframe with the shape of *(16269
 There are 1630 landmarks in orginal data, but we just use 21 landmarks from each hand and 80 landmarks from lip in this project.
 
 ![This image illustrates the 21 keypoints on the hand](hand_landmarks.png)
-*This image illustrates the 21 keypoints on the hand*
+*This image illustrates the 21 landmarks on the hand*
 
 source: [MediaPipe](https://google.github.io/mediapipe/solutions/hands.html)
 
 ![lip landmarks](lip_landmarks.png)
-*This image illustrates the 80 keypoints on the lip*
+*This image illustrates the 80 landmarks on the lip*
 
 source: [MediaPipe](https://google.github.io/mediapipe/solutions/face_mesh.html)
 
