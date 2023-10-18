@@ -2,7 +2,7 @@
 
 ## 👋 Introduction
 
-In this project, We will create a model trained on largest dataset of its kind, release specially for[Google - American Sign Language Fingerspelling Recognition Competition](https://www.kaggle.com/competitions/asl-fingerspelling/data). **Tensorflow** are framework that mainly using in this project. 
+In this project, We will create a model trained on largest dataset of its kind, release specially for [Google - American Sign Language Fingerspelling Recognition Competition](https://www.kaggle.com/competitions/asl-fingerspelling/data). **Tensorflow** are framework that mainly using in this project. 
 
 One thing you need to know that, I make this project **just for learning**, so that this model performance can not be better than another SOTA models.
 
@@ -21,7 +21,8 @@ We also deploy it local host so that user cannot use it and we will not discuss 
 ## 📝 Work Flow
 
 ### A. Data
-*path* - The path to the landmark file.
+<span style="color: green"> path </span>
+ - The path to the landmark file.
 *file_id* - A unique identifier for the data file.
 *participant_id* - A unique identifier for the data contributor.
 *sequence_id* - A unique identifier for the landmark sequence. Each data file may contain many sequences.
