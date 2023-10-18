@@ -2,7 +2,7 @@
 
 ## 👋 Introduction
 
-In this project, We will create a model trained on largest dataset of its kind, release specially for [Google - American Sign Language Fingerspelling Recognition Competition](https://www.kaggle.com/competitions/asl-fingerspelling/data). **Tensorflow** are framework that mainly using in this project. 
+In this project, We will create a model trained on largest dataset of its kind, release specially for [Google - American Sign Language Fingerspelling Recognition Competition](https://www.kaggle.com/competitions/asl-fingerspelling). **Tensorflow** are framework that mainly using in this project. 
 
 One thing you need to know that, We make this project **just for learning**, so that this model performance can not be better than another SOTA models.
 
@@ -12,7 +12,7 @@ We also deploy it in local host so that it limited of client using and and we wi
 **I would like to express my sincere thanks to the these wonderful people who have contributed to this project with me:**
 
 - Hoa D. (Leader)
-- Tung S. (contributor)
+- Tung N. (contributor)
 - Binh P. (contributor)
 - Hai V. (contributor)
 - Lam N. (contributor)
@@ -21,7 +21,7 @@ We also deploy it in local host so that it limited of client using and and we wi
 ## 📝 Work Flow
 ![Alt text](workflow.png)
 ### A. Data
-1. #### Raw Data
+1. #### Raw Data [Download](https://www.kaggle.com/competitions/asl-fingerspelling/data)
 `path` - The path to the landmark file.
 
 `file_id` - A unique identifier for the data file.
@@ -32,14 +32,7 @@ We also deploy it in local host so that it limited of client using and and we wi
 
 `phrase` - The labels for the landmark sequence. The train and test datasets contain randomly generated addresses, phone numbers, and urls derived from components of real addresses/phone numbers/urls.
 
-2. #### EDA 
-<!-- A parquet/landmarks file containing a pandas dataframe with the shape of *(162699,1630)*, with 162699 is a length of list of short sentences and 1630 columns are 1630 landmarks.
-
-*Example:*
-![train data](train_df.png)
-*This image is a part of training data*
-![landmarks](landmarks_df.png)
-*This image is a part of landmarks dataframe in parquet file* -->
+2. #### EDA - FULL CODE UPDATE LATER 
 
 There are 1630 landmarks in orginal data, but we just use 21 landmarks from each hand and 80 landmarks from lip in this project.
 
@@ -53,10 +46,14 @@ source: [MediaPipe](https://google.github.io/mediapipe/solutions/hands.html)
 
 source: [MediaPipe](https://google.github.io/mediapipe/solutions/face_mesh.html)
 
+This is just demo a part of EDA, please check full code.
 
+3. #### Preprocessing - CODE UPDATE LATER
 
-3. #### Preprocessing
+### B. Model | [CODE](https://github.com/ThanhBinh-IwtR/SIGN_LANGUAGE/tree/main/Project)
 
-### B. Model
-
-### C. Web
+### C. Web | [CODE](https://github.com/ThanhBinh-IwtR/SIGN_LANGUAGE/tree/main/Web)
+### D. Future Work
+This project is serve for our learning purpose, it just have limited time so that we will transfer to Vietnamese in the future. All of our update will be in this repository.
+### E. Paper:
+We will release our paper in the future.
