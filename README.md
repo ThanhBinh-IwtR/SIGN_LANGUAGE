@@ -12,7 +12,7 @@ We also deploy it in local host so that it limited of client using and and we wi
 **I would like to express my sincere thanks to the these wonderful people who have contributed to this project with me:**
 
 - Hoa D. (Leader)
-- Tung S. (contributor)
+- Tung N. (contributor)
 - Binh P. (contributor)
 - Hai V. (contributor)
 - Lam N. (contributor)
@@ -60,3 +60,7 @@ source: [MediaPipe](https://google.github.io/mediapipe/solutions/face_mesh.html)
 ### B. Model
 
 ### C. Web
+### D. Future Work
+This project is serve for our learning purpose, it just have limited time so that we will transfer to Vietnamese in the future. All of our update will be in this repository.
+### E. Paper:
+We will release our paper in the future.
