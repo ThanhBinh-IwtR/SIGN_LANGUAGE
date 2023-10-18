@@ -19,7 +19,7 @@ We also deploy it in local host so that it limited of client using and and we wi
 - Duc P. (contributor)
 
 ## 📝 Work Flow
-
+![Alt text](workflow.png)
 ### A. Data
 1. #### Raw Data
 `path` - The path to the landmark file.
@@ -33,7 +33,7 @@ We also deploy it in local host so that it limited of client using and and we wi
 `phrase` - The labels for the landmark sequence. The train and test datasets contain randomly generated addresses, phone numbers, and urls derived from components of real addresses/phone numbers/urls. Any overlap with real addresses, phone numbers, or urls is purely accidental. The supplemental dataset consists of fingerspelled sentences. *Note that some of the urls include adult content*. The intent of this competition is to support the Deaf and Hard of Hearing community in engaging with technology on an equal footing with other adults.
 
 2. #### EDA 
-A parquet/landmarks file containing a pandas dataframe with the shape of *(162699,1630)*, 162699 is a length of list of short sentences and 1630 columns are 1630 landmarks.
+A parquet/landmarks file containing a pandas dataframe with the shape of *(162699,1630)*, with 162699 is a length of list of short sentences and 1630 columns are 1630 landmarks.
 
 *Example:*
 ![train data](train_df.png)
