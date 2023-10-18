@@ -30,16 +30,16 @@ We also deploy it in local host so that it limited of client using and and we wi
 
 `sequence_id` - A unique identifier for the landmark sequence. Each data file may contain many sequences.
 
-`phrase` - The labels for the landmark sequence. The train and test datasets contain randomly generated addresses, phone numbers, and urls derived from components of real addresses/phone numbers/urls. Any overlap with real addresses, phone numbers, or urls is purely accidental. The supplemental dataset consists of fingerspelled sentences. *Note that some of the urls include adult content*. The intent of this competition is to support the Deaf and Hard of Hearing community in engaging with technology on an equal footing with other adults.
+`phrase` - The labels for the landmark sequence. The train and test datasets contain randomly generated addresses, phone numbers, and urls derived from components of real addresses/phone numbers/urls.
 
 2. #### EDA 
-A parquet/landmarks file containing a pandas dataframe with the shape of *(162699,1630)*, with 162699 is a length of list of short sentences and 1630 columns are 1630 landmarks.
+<!-- A parquet/landmarks file containing a pandas dataframe with the shape of *(162699,1630)*, with 162699 is a length of list of short sentences and 1630 columns are 1630 landmarks.
 
 *Example:*
 ![train data](train_df.png)
 *This image is a part of training data*
 ![landmarks](landmarks_df.png)
-*This image is a part of landmarks dataframe in parquet file*
+*This image is a part of landmarks dataframe in parquet file* -->
 
 There are 1630 landmarks in orginal data, but we just use 21 landmarks from each hand and 80 landmarks from lip in this project.
 
