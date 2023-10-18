@@ -21,12 +21,11 @@ We also deploy it local host so that user cannot use it and we will not discuss 
 ## 📝 Work Flow
 
 ### A. Data
-<span style="color: green"> path </span>
- - The path to the landmark file.
-*file_id* - A unique identifier for the data file.
-*participant_id* - A unique identifier for the data contributor.
-*sequence_id* - A unique identifier for the landmark sequence. Each data file may contain many sequences.
-*phrase* - The labels for the landmark sequence. The train and test datasets contain randomly generated addresses, phone numbers, and urls derived from components of real addresses/phone numbers/urls. Any overlap with real addresses, phone numbers, or urls is purely accidental. The supplemental dataset consists of fingerspelled sentences. *Note that some of the urls include adult content*. The intent of this competition is to support the Deaf and Hard of Hearing community in engaging with technology on an equal footing with other adults.
+`path` - The path to the landmark file.
+`file_id` - A unique identifier for the data file.
+`participant_id` - A unique identifier for the data contributor.
+`sequence_id` - A unique identifier for the landmark sequence. Each data file may contain many sequences.
+`phrase` - The labels for the landmark sequence. The train and test datasets contain randomly generated addresses, phone numbers, and urls derived from components of real addresses/phone numbers/urls. Any overlap with real addresses, phone numbers, or urls is purely accidental. The supplemental dataset consists of fingerspelled sentences. *Note that some of the urls include adult content*. The intent of this competition is to support the Deaf and Hard of Hearing community in engaging with technology on an equal footing with other adults.
 
 ### B. Model
 
