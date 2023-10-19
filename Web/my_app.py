@@ -48,9 +48,9 @@ def upload_file():
 
     if file:
         file.save('upload/' + file.filename)
-        result = web_detect.predict_video('upload/' + file.filename)
-        return result
+        for result in web_detect.predict_video('upload/' + file.filename):
+            yield result
 
 
 if __name__ == "__main__":
-    app.run( debug=True)
+    app.run( debug=False)
