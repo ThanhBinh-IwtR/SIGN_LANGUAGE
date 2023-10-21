@@ -1,4 +1,4 @@
-<h1 align="center"> Sign Language </h1>
+04<h1 align="center"> Sign Language </h1>
 
 ## 👋 Introduction
 
@@ -42,7 +42,7 @@ There are 1630 landmarks in orginal data, but we just use 21 landmarks from each
 source: [MediaPipe](https://google.github.io/mediapipe/solutions/hands.html)
 
 ![lip landmarks](lip_landmarks.png)
-*This image illustrates the 80 landmarks on the lip*
+*This image illustrates the landmarks on the lip* 
 
 source: [MediaPipe](https://google.github.io/mediapipe/solutions/face_mesh.html)
 
