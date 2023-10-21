@@ -1,4 +1,4 @@
-04<h1 align="center"> Sign Language </h1>
+<h1 align="center"> Sign Language </h1>
 
 ## 👋 Introduction
 
