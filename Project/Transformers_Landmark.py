@@ -1,6 +1,5 @@
 '''
-- This module defines the LandmarkEmbedding and Embedding classes used in the Transformer model 
-for sign language recognition. 
+- This module defines the LandmarkEmbedding and Embedding classes used in the Transformer model for sign language recognition. 
 - It also defines several constants and hyperparameters used in the model.
 
 Classes:
