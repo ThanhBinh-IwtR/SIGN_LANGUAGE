@@ -52,6 +52,7 @@ This is just demo a part of EDA, please check full code.
 
 ### B. Model | [CODE](https://github.com/ThanhBinh-IwtR/SIGN_LANGUAGE/tree/main/Project)
 1. #### Model Architecture
+This image below is showing on horizontal view for better experience of getting general knowledge, but you can see the vertical version by this [link](model.tflite.png)
 ![Model Architecture](model.tflite_horizon.png)
 
 2. #### Training
