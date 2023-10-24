@@ -5,28 +5,29 @@ body{
 .headingtext{
 
 }
+
 .headingtext h1{
     text-align: center;
     font-size: 5rem;
     color: yellow;
 }
 
-
-
-
-
-
-
-
-.bg{
+.strvideo{
     text-align: center;
 }
 
-.button{
-    background-color: greenyellow;
+.bg{
+    text-align: center;
+    padding-top: 20px;
+    
+}
+
+button{
+    background-color: blueviolet;
     border-radius: 30px 30px 30px 30px;
     text-align: center;
     width: 20%;
+    
 }
 
 .button h1{
@@ -35,3 +36,10 @@ body{
     color: white;
 }
 
+.flipped-video {
+    transform: scaleX(-1);
+}
+
+textarea {
+    resize: none;
+  }
