@@ -19,7 +19,7 @@ We also deploy it in local host so that it limited of client using and and we wi
 - Duc P. (contributor)
 
 ## 📝 Work Flow
-![Alt text](workflow.png)
+![Alt text](assets\workflow.png)
 ### A. Data
 1. #### Raw Data | [Download](https://www.kaggle.com/competitions/asl-fingerspelling/data)
 `path` - The path to the landmark file.
@@ -36,12 +36,12 @@ We also deploy it in local host so that it limited of client using and and we wi
 
 There are 1630 landmarks in orginal data, but we just use 21 landmarks from each hand and 80 landmarks from lip in this project.
 
-![This image illustrates the 21 keypoints on the hand](hand_landmarks.png)
+![This image illustrates the 21 keypoints on the hand](assets\hand_landmarks.png)
 *This image illustrates the 21 landmarks on the hand*
 
 source: [MediaPipe](https://google.github.io/mediapipe/solutions/hands.html)
 
-![lip landmarks](lip_landmarks.png)
+![lip landmarks](assets\lip_landmarks.png)
 *This image illustrates the landmarks on the lip* 
 
 source: [MediaPipe](https://google.github.io/mediapipe/solutions/face_mesh.html)
@@ -52,8 +52,9 @@ This is just demo a part of EDA, please check full code.
 
 ### B. Model | [CODE](https://github.com/ThanhBinh-IwtR/SIGN_LANGUAGE/tree/main/Project)
 1. #### Model Architecture
-This image below is showing on horizontal view for better experience of getting general knowledge, but you can see the vertical version by this [link](model.tflite.png)
-![Model Architecture](model.tflite_horizon.png)
+This image below is showing on horizontal view for better experience of getting general knowledge, but you can see the vertical version via this [link](assets\model.tflite.png)
+
+![Model Architecture](assets\model.tflite_horizon.png)
 
 2. #### Training
 3. #### Evaluation
