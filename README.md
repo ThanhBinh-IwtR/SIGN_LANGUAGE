@@ -52,7 +52,7 @@ This is just demo a part of EDA, please check full code.
 
 ### B. Model | [CODE](https://github.com/ThanhBinh-IwtR/SIGN_LANGUAGE/tree/main/Project)
 1. #### Model Architecture
-![Model Architecture](model.tflite.svg)
+![Model Architecture](model.tflite.png)
 
 2. #### Training
 3. #### Evaluation
