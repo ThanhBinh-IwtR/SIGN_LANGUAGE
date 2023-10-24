@@ -21,7 +21,7 @@ We also deploy it in local host so that it limited of client using and and we wi
 ## 📝 Work Flow
 ![Alt text](workflow.png)
 ### A. Data
-1. #### Raw Data [Download](https://www.kaggle.com/competitions/asl-fingerspelling/data)
+1. #### Raw Data | [Download](https://www.kaggle.com/competitions/asl-fingerspelling/data)
 `path` - The path to the landmark file.
 
 `file_id` - A unique identifier for the data file.
@@ -32,7 +32,7 @@ We also deploy it in local host so that it limited of client using and and we wi
 
 `phrase` - The labels for the landmark sequence. The train and test datasets contain randomly generated addresses, phone numbers, and urls derived from components of real addresses/phone numbers/urls.
 
-2. #### EDA - FULL CODE UPDATE LATER 
+2. #### EDA | [CODE](https://github.com/ThanhBinh-IwtR/SIGN_LANGUAGE/blob/main/data/asl-eda.ipynb)
 
 There are 1630 landmarks in orginal data, but we just use 21 landmarks from each hand and 80 landmarks from lip in this project.
 
@@ -51,6 +51,13 @@ This is just demo a part of EDA, please check full code.
 3. #### Preprocessing - CODE UPDATE LATER
 
 ### B. Model | [CODE](https://github.com/ThanhBinh-IwtR/SIGN_LANGUAGE/tree/main/Project)
+1. #### Model Architecture
+This image below is showing on horizontal view for better experience of getting general knowledge, but you can see the vertical version by this [link](model.tflite.png)
+![Model Architecture](model.tflite_horizon.png)
+
+2. #### Training
+3. #### Evaluation
+5. #### Model Performance
 
 ### C. Web | [CODE](https://github.com/ThanhBinh-IwtR/SIGN_LANGUAGE/tree/main/Web)
 ### D. Future Work
