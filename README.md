@@ -1,5 +1,6 @@
 <h1 align="center"> Sign Language </h1>
 
+![Demo](assets/demo.png)
 ## 👋 Introduction
 
 In this project, We will create a model trained on largest dataset of its kind, release specially for [Google - American Sign Language Fingerspelling Recognition Competition](https://www.kaggle.com/competitions/asl-fingerspelling). **Tensorflow** are framework that mainly using in this project. 
