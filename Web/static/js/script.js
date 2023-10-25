@@ -93,11 +93,12 @@ function uploadFile() {
 
     xhr.open('POST', '/upload', true);
 
-    xhr.onload = function() {
-        if (xhr.status === 200) {
-            
-            document.getElementById('result').value = xhr.responseText;
-        } else {
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 3 && xhr.status === 200) {
+            var responseText = xhr.responseText;
+           
+            document.getElementById('result').value = responseText;
+        } else if (xhr.readyState === 4 && xhr.status !== 200) {
             document.getElementById('result').innerHTML = "Có lỗi xảy ra khi tải lên tệp.";
         }
     };
