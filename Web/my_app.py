@@ -29,6 +29,10 @@ def gen():
 def demo():
     return render_template("demo.html")
 
+def generate_results(file):
+    for result in web_detect.predict_video('upload/' + file.filename):
+        yield f"{result}\n\n"
+
 @app.route('/video_feed')
 def video_feed():
     return Response(gen(),
@@ -48,9 +52,7 @@ def upload_file():
 
     if file:
         file.save('upload/' + file.filename)
-        for result in web_detect.predict_video('upload/' + file.filename):
-            yield result
-
+        return Response(generate_results(file), mimetype='text/event-stream')
 
 if __name__ == "__main__":
     app.run( debug=False)
