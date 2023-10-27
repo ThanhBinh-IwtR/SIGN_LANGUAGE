@@ -46,6 +46,8 @@ def predict_video(file_path,num_frame_space = 30):
                 all_res.append(res)
                 res = ''
                 print('RESET')
+                # if all_res[-1][-2:] ==  '. ':
+                #     all_res[-1][-2:] = ''
                 yield ''.join(all_res)
             elif len(sequence) == 128:
                 res, n_frame,sequence = reset_all(res,sequence_arr)
@@ -57,6 +59,7 @@ def predict_video(file_path,num_frame_space = 30):
         all_res.append(res)
         cap.release()
         cv2.destroyAllWindows()
-        return ''.join(all_res)
-# for res in predict_video("D:/AI/DPLS2L/S2L/Project/100 ASL Signs in 5 Minutes!.mp4"):
-#     print('DAY LA YEILD KET QUA : ', res)
+        print('===Xon=g')
+        yield ''.join(all_res)
+for res in predict_video("D:/AI/DPLS2L/S2L/Project/18s.mp4"):
+    print('DAY LA YEILD KET QUA : ', res)   

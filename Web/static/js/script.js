@@ -45,45 +45,42 @@ startStream();
 recordButton.addEventListener('click', startRecording);
 stopRecordButton.addEventListener('click', stopRecording);
 
-
+//streaming and cut video
 let recording = false;
 recordButton.addEventListener('click', () => {
     if (!recording) {
-        // Bắt đầu ghi video
+
         recording = true;
 
-        // Thay đổi màu nền của nút "Record"
+  
         recordButton.style.backgroundColor = '#7fdbff';
         stopRecordButton.style.backgroundColor = '#ff4136';
 
-        // Đổi nội dung của nút "Record"
         recordButton.textContent = 'Recording...';
 
-        // Thực hiện các hành động bắt đầu ghi video
+  
     } else {
-        // Dừng ghi video
+   
         recording = false;
 
-        // Trả lại màu nền ban đầu của nút "Record"
+ 
         recordButton.style.backgroundColor = '#0074d9';
         stopRecordButton.style.backgroundColor = '#ff4136';
 
-        // Trả lại nội dung ban đầu của nút "Record"
+
         recordButton.textContent = 'Start Record';
 
-        // Thực hiện các hành động dừng ghi video
+  
     }
 });
 
 stopRecordButton.addEventListener('click', () => {
-    // Thay đổi màu nền của nút "Stop Record"
+
     stopRecordButton.style.backgroundColor = '#ff4136';
 
-    // Thực hiện các hành động khi nhấp vào nút "Stop Record"
-    // (ví dụ: dừng ghi video)
 });
 
-
+//print output in realtime
 function uploadFile() {
     var formData = new FormData();
     var fileInput = document.getElementById('file');

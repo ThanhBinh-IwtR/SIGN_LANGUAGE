@@ -10,30 +10,48 @@
     <link href="assets/fonts/elegant-fonts.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css" type="text/css">
-    <link rel="stylesheet" href="assets/css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+
 
     <title>SIGN LANGUAGE</title>
 
-    <style>
-        body { background-color: #f3f3f3; }
-    </style>
+    
 
 </head>
 
-<body>
+<body >
 <div class="page-wrapper">
     <header>
-        <!-- <div class="brand animate"><a href=""><img src="./assets/img/SL.png" alt=""></a></div> -->
-        <nav>
-            <ul class="navigation animate">
-                <li><a href="" data-toggle="modal" data-target="#modal-about-us">Project</a></li>
-                <li><a href="" data-toggle="modal" data-target="#modal-our-works">Team Members</a></li>
-                <li><a href="" data-toggle="modal" data-target="#modal-services">Development</a></li>
-                <li><a href="" data-toggle="modal" data-target="#modal-contact-us">Contact</a></li>
-            </ul>
-            <!--end navigation-->
-        </nav>
+        <div class="navbarhome">
+            <div class="col-lg-4 d-flex align-items-center">
+                <div>
+                    <img src="./assets/img/SL.png" alt="" style="max-width: 80%;">
+                </div>       
+            </div>
+                
+            <div class="col-lg-8 d-flex justify-content-end align-items-end"  style="display: flex; justify-content: end;">
+                <nav>
+                    <ul class="navigation animate">
+                        <li><a href="" data-toggle="modal" data-target="#modal-about-us">Project</a></li>
+                        <li><a href="" data-toggle="modal" data-target="#modal-our-works">Team Members</a></li>
+                        <li><a href="" data-toggle="modal" data-target="#modal-services">Development</a></li>
+                        <li><a href="" data-toggle="modal" data-target="#modal-contact-us">Contact</a></li>
+                    </ul>
+                    <!--end navigation-->
+                </nav>
+            </div>
+
+                <!-- <div class="col-lg-2 col-xl-7">
+                    <div class="brand animate">
+                        <div id="theme" class="fas fa-moon"></div>
+                    </div>
+                    
+                </div> -->
+            
+        </div>
+        
+        
     </header>
     <div class="content-wrapper">
         <div class="content-main animate">
@@ -41,14 +59,14 @@
                 <h1 class="font-size-90">Get Ready!</h1>
                 <h2 class="opacity-60">Something Awesome is Coming Soon</h2>
                 <div class="col-md-10 col-sm-10 col-md-offset-1 col-sm-offset-1">
-                    <form class="form">
-                        <div class="input-group">
-                            <input type="text" class="form-control" name="email" placeholder="Your email">
-                            <span class="input-group-btn">
-                                <button class="btn" type="submit"><i class="arrow_right"></i></button>
-                            </span>
-                        </div>
-                    </form>
+                    <div  class="sectionbutton">                     
+                            <a href="./detect.html">
+                                <button >
+                                    <i class="arrow_right"></i>
+                                </button>
+                            </a> 
+                    </div>
+                    
                     <!--end form-->
                 </div>
                 <!--end col-md-10-->
@@ -70,7 +88,7 @@
         <!--end background-wrapper-->
     </div>
     <!--end content-wrapper-->
-    <footer>
+    <!-- <footer>
         <div class="social-icons animate">
             <a href="#"><i class="fa fa-twitter"></i></a>
             <a href="#"><i class="fa fa-facebook"></i></a>
@@ -79,8 +97,8 @@
             <a href="#"><i class="fa fa-pinterest"></i></a>
             <a href="#"><i class="fa fa-google-plus"></i></a>
         </div>
-        <!--end social-icons-->
-    </footer>
+      
+    </footer> -->
 </div>
 <!--end page-wrapper-->
 
@@ -91,26 +109,63 @@
             <div class="modal-content">
                 <div class="modal-header" data-background-color="#61dfff">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h2 class="modal-title" id="modal-about-us-label">About Us</h2>
+                    <h2 class="modal-title" id="modal-about-us-label">Our Project</h2>
                 </div>
                 <div class="modal-body">
                     <div class="row">
+                        <div class="col-md-7 col-sm-7">
+                            <section>
+                                <h3>Problem</h3>
+                                <p>Voice-enabled assistants offer a range of useful features, including automated speech recognition (ASR) and machine translation. However, these technologies are often inaccessible to the over 70 million Deaf people worldwide who use sign language, and the 1.5+ billion people globally affected by hearing loss.
+                                </p>
+                                <p>
+                                    Fingerspelling, a component of sign language that uses hand shapes to represent letters, is often faster than typing on a smartphone. Despite this, sign language recognition AI for text entry is behind voice-to-text or gesture-based typing due to the lack of robust datasets.
+                                </p>
+                            </section>
+                            <section>
+                                <h3>Solve</h3>
+                                <!-- <div class="skill">
+                                    <h4>Webdesign</h4>
+                                    <aside>80%</aside>
+                                    <figure class="bar">
+                                        <div class="bar-active width-80"></div>
+                                        <div class="bar-background"></div>
+                                    </figure>
+                                </div>
+                               
+                                <div class="skill">
+                                    <h4>Photography</h4>
+                                    <aside>100%</aside>
+                                    <figure class="bar">
+                                        <div class="bar-active width-100"></div>
+                                        <div class="bar-background"></div>
+                                    </figure>
+                                </div>
+                               
+                                <div class="skill">
+                                    <h4>Marketing</h4>
+                                    <aside>60%</aside>
+                                    <figure class="bar">
+                                        <div class="bar-active width-60"></div>
+                                        <div class="bar-background"></div>
+                                    </figure>
+                                </div> -->
+                               <p>We propose a novel deep learning model to solve the problem of sign language recognition. Our model uses mediapipe and transformer to extract and encode the hand gestures and facial expressions of the signers. We then use a decoder to generate the corresponding spoken language text. We evaluate our model on several sign language datasets and show that it achieves state-of-the-art performance. Our model is written in English and can be easily adapted to other languages.</p>
+                            </section>
+                        </div>
+                        <!--end col-md-7-->
                         <div class="col-md-5 col-sm-5">
                             <section>
-                                <h3>Our Team</h3>
+                                <h3>Target</h3>
                                 <div class="row">
                                     <div class="col-md-6 col-sm-6">
                                         <div class="person">
                                             <div class="image">
                                                 <div class="bg-transfer"><img src="assets/img/person-01.jpg" alt=""></div>
                                             </div>
-                                            <h4>Jane Doe</h4>
-                                            <h5>Company CEO</h5>
-                                            <div class="social-icons">
-                                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                                <a href="#"><i class="fa fa-youtube"></i></a>
-                                            </div>
+                                            <h4>Translate</h4>
+                                            <h5>For deaf mute</h5>
+                                            
                                         </div>
                                         <!--end person-->
                                     </div>
@@ -120,13 +175,9 @@
                                             <div class="image">
                                                 <div class="bg-transfer"><img src="assets/img/person-02.jpg" alt=""></div>
                                             </div>
-                                            <h4>Peter Wood</h4>
-                                            <h5>Marketing Specialist</h5>
-                                            <div class="social-icons">
-                                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                                <a href="#"><i class="fa fa-youtube"></i></a>
-                                            </div>
+                                            <h4>Website</h4>
+                                            <h5>Application</h5>
+                                            
                                         </div>
                                         <!--end person-->
                                     </div>
@@ -136,52 +187,7 @@
                             </section>
                         </div>
                         <!--end col-md-4-->
-                        <div class="col-md-7 col-sm-7">
-                            <section>
-                                <h3>Shortly About Us</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus laoreet sed tellus ut
-                                    condimentum. Aenean hendrerit, nisl sit amet molestie eleifend, magna augue pulvinar enim,
-                                    nec mattis quam eros non ex. Pellentesque luctus ex enim, a tempus lorem egestas quis.
-                                    Nunc et tincidunt dui. Cras in fermentum leo.
-                                </p>
-                                <p>
-                                    Mauris molestie pharetra tristique. Donec interdum odio erat, sed ullamcorper lectus
-                                    egestas non.  Quisque sollicitudin vestibulum leo eget malesuada. Pellentesque sem erat,
-                                    tempor a odio sed, tincidunt mollis purus. Cras suscipit ultrice
-                                </p>
-                            </section>
-                            <section>
-                                <h3>Our Skills</h3>
-                                <div class="skill">
-                                    <h4>Webdesign</h4>
-                                    <aside>80%</aside>
-                                    <figure class="bar">
-                                        <div class="bar-active width-80"></div>
-                                        <div class="bar-background"></div>
-                                    </figure>
-                                </div>
-                                <!--end skill-->
-                                <div class="skill">
-                                    <h4>Photography</h4>
-                                    <aside>100%</aside>
-                                    <figure class="bar">
-                                        <div class="bar-active width-100"></div>
-                                        <div class="bar-background"></div>
-                                    </figure>
-                                </div>
-                                <!--end skill-->
-                                <div class="skill">
-                                    <h4>Marketing</h4>
-                                    <aside>60%</aside>
-                                    <figure class="bar">
-                                        <div class="bar-active width-60"></div>
-                                        <div class="bar-background"></div>
-                                    </figure>
-                                </div>
-                                <!--end skill-->
-                            </section>
-                        </div>
-                        <!--end col-md-7-->
+                        
                     </div>
                     <!--end row-->
                 </div>
@@ -202,57 +208,57 @@
             <div class="modal-content">
                 <div class="modal-header" data-background-color="#8dff8b">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h2 class="modal-title" id="modal-our-works-label">Our Works</h2>
+                    <h2 class="modal-title" id="modal-our-works-label">Team Member</h2>
                 </div>
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-md-4 col-sm-4">
-                            <a href="assets/img/1.jpg" class="work image-popup">
+                            <a href="https://www.facebook.com/phanhuynhthanhbinh/" target="_blank" class="work">
                                 <div class="description">
-                                    <h4>Paperworks</h4>
-                                    <h5>Product Design</h5>
+                                    <h4>Nguyễn Sơn Tùng</h4>
+                                    <h5>Model</h5>
                                 </div>
                                 <!--end description-->
                                 <div class="image">
-                                    <div class="bg-transfer"><img src="assets/img/1.jpg" alt=""></div>
+                                    <div class="bg-transfer"><img src="assets/img/tung_ng.jpg" alt=""></div>
                                 </div>
                             </a>
                             <!--end work-->
                         </div>
                         <!--end col-md-4-->
                         <div class="col-md-4 col-sm-4">
-                            <a href="assets/img/2.jpg" class="work image-popup">
+                            <a href="https://www.facebook.com/phanhuynhthanhbinh/" target="_blank" class="work">
                                 <div class="description">
-                                    <h4>Landscape</h4>
-                                    <h5>Illustration</h5>
+                                    <h4>Vũ Hoàng Sơn Hải</h4>
+                                    <h5>Model</h5>
                                 </div>
                                 <!--end description-->
                                 <div class="image">
-                                    <div class="bg-transfer"><img src="assets/img/2.jpg" alt=""></div>
+                                    <div class="bg-transfer"><img src="assets/img/coursera.png" alt=""></div>
                                 </div>
                             </a>
                             <!--end work-->
                         </div>
                         <!--end col-md-4-->
                         <div class="col-md-4 col-sm-4">
-                            <a href="assets/img/3.jpg" class="work image-popup">
+                            <a href="https://www.facebook.com/phanhuynhthanhbinh/" target="_blank" class="work">
                                 <div class="description">
-                                    <h4>Massa</h4>
-                                    <h5>Logo design</h5>
+                                    <h4>Phan Huỳnh Thanh Bình</h4>
+                                    <h5>Web design</h5>
                                 </div>
                                 <!--end description-->
                                 <div class="image">
-                                    <div class="bg-transfer"><img src="assets/img/3.jpg" alt=""></div>
+                                    <div class="bg-transfer"><img src="assets/img/binh_andrew.JPG" alt=""></div>
                                 </div>
                             </a>
                             <!--end work-->
                         </div>
                         <!--end col-md-4-->
                         <div class="col-md-4 col-sm-4">
-                            <a href="assets/img/4.jpg" class="work image-popup">
+                            <a href="https://www.facebook.com/phanhuynhthanhbinh/" target="_blank" class="work">
                                 <div class="description">
-                                    <h4>11Street</h4>
-                                    <h5>Logo design</h5>
+                                    <h4>Phạm Đức Hồng Đức</h4>
+                                    <h5>Data</h5>
                                 </div>
                                 <!--end description-->
                                 <div class="image">
@@ -263,10 +269,10 @@
                         </div>
                         <!--end col-md-4-->
                         <div class="col-md-4 col-sm-4">
-                            <a href="assets/img/5.jpg" class="work image-popup">
+                            <a href="https://www.facebook.com/phanhuynhthanhbinh/" target="_blank" class="work">
                                 <div class="description">
-                                    <h4>App</h4>
-                                    <h5>Branding</h5>
+                                    <h4>Đàm Nguyễn Quỳnh Hoa</h4>
+                                    <h5>Data & Model</h5>
                                 </div>
                                 <!--end description-->
                                 <div class="image">
@@ -277,10 +283,10 @@
                         </div>
                         <!--end col-md-4-->
                         <div class="col-md-4 col-sm-4">
-                            <a href="assets/img/6.jpg" class="work image-popup">
+                            <a href="https://www.facebook.com/phanhuynhthanhbinh/" target="_blank" class="work">
                                 <div class="description">
-                                    <h4>Moon</h4>
-                                    <h5>Photography</h5>
+                                    <h4>Hoàng Thanh Lâm</h4>
+                                    <h5>Data</h5>
                                 </div>
                                 <!--end description-->
                                 <div class="image">
@@ -310,7 +316,7 @@
             <div class="modal-content">
                 <div class="modal-header" data-background-color="#ff6767">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h2 class="modal-title" id="modal-services-label">Services</h2>
+                    <h2 class="modal-title" id="modal-services-label">Strategies</h2>
                 </div>
                 <div class="modal-body">
                     <div class="row">
@@ -319,7 +325,7 @@
                                 <div class="icon">
                                     <img src="assets/img/camera.png" alt="">
                                 </div>
-                                <h3>Photography</h3>
+                                <h3>Planing</h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus laoreet sed tellus ut condimentum</p>
                             </div>
                             <!--end box-->
@@ -330,7 +336,7 @@
                                 <div class="icon">
                                     <img src="assets/img/computer.png" alt="">
                                 </div>
-                                <h3>Webdesign</h3>
+                                <h3>Data Collection</h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus laoreet sed tellus ut condimentum</p>
                             </div>
                             <!--end box-->
@@ -341,7 +347,7 @@
                                 <div class="icon">
                                     <img src="assets/img/compose.png" alt="">
                                 </div>
-                                <h3>Copywriting</h3>
+                                <h3>Data Processing</h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus laoreet sed tellus ut condimentum</p>
                             </div>
                             <!--end box-->
@@ -352,7 +358,7 @@
                                 <div class="icon">
                                     <img src="assets/img/cloud.png" alt="">
                                 </div>
-                                <h3>Cloud Servers</h3>
+                                <h3>Modeling</h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus laoreet sed tellus ut condimentum</p>
                             </div>
                             <!--end box-->
@@ -363,7 +369,7 @@
                                 <div class="icon">
                                     <img src="assets/img/mail.png" alt="">
                                 </div>
-                                <h3>Email Campaigns</h3>
+                                <h3>Evaluation</h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus laoreet sed tellus ut condimentum</p>
                             </div>
                             <!--end box-->
@@ -374,7 +380,7 @@
                                 <div class="icon">
                                     <img src="assets/img/magnifyingglass.png" alt="">
                                 </div>
-                                <h3>SEO Optimization</h3>
+                                <h3>Deploy Application</h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus laoreet sed tellus ut condimentum</p>
                             </div>
                             <!--end box-->
@@ -481,6 +487,8 @@
 <script  src="assets/js/jquery.plugin.min.js"></script>
 <script  src="assets/js/jquery.parallax.min.js"></script>
 <script  src="assets/js/custom.js"></script>
+<script src="/web/static/js/main.js"></script>
+<script src="/web/static/js/designweb.js"></script>
 
 <script>
 

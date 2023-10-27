@@ -1,4 +1,3 @@
-
 from flask import Flask, render_template,Response, jsonify, request
 import cv2
 import os
@@ -24,7 +23,7 @@ def gen():
         frame = buffer.tobytes()
         yield (b'--frame\r\n'
                 b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
-             
+            
 @app.route("/")
 def demo():
     return render_template("demo.html")
