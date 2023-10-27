@@ -43,6 +43,15 @@ C. Components
 A. Basic Styling
 ***********************************************************************************************************************/
 
+
+body {
+    background-color: white;
+    /* color: #333; */
+    transition: all 0.5s ease-in-out;
+    overflow-x: hidden;
+}
+  
+
 body, html {
     height: 100%;
     font-family: 'Montserrat', sans-serif;
@@ -122,6 +131,18 @@ B. Helpers
 .animate.idle {
     opacity: 1;
     transform: scale(1);
+}
+
+.hide-scroll {
+    overflow-y: hidden;
+}
+  
+.fade-out {
+    opacity: 0;
+}
+  
+.fade-in {
+    opacity: 1;
 }
 
 .background-wrapper, .active-slider {
@@ -415,6 +436,15 @@ C. Components
     position: relative;
 }
 
+/* .content-main.animate {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+  
+.content-main.animate.show {
+    opacity: 1;
+} */
+
 /* -- Count Down */
 
 .count-down {
@@ -699,7 +729,7 @@ form .status i {
     padding: .3125rem .375rem;
     font-weight: bold;
     text-transform: uppercase;
-    font-size: .75rem;
+    font-size: 1rem;
     pointer-events: auto;
 }
 
@@ -900,7 +930,7 @@ form .status i {
 
 .work .image {
     position: relative;
-    height: 13.75rem;
+    height: 20rem;
     z-index: 1;
 }
 
@@ -916,4 +946,269 @@ form .status i {
 .imgtest{
     position: absolute;
     z-index: 99999;
+}
+
+.start{
+    z-index: 999;
+    position: absolute;
+}
+
+.sectionbutton button{
+    width: 9em;
+    height: 3em;
+    border-radius: 30em;
+    font-size: 15px;
+    font-family: inherit;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 4px 4px 10px #c5c5c5, -4px -4px 10px #ffffff;
+    pointer-events: auto;
+    
+}
+.sectionbutton button::before{
+    content: '';
+    width: 0;
+    height: 3em;
+    border-radius: 30em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to right, #62ff5f 0%, #f64b4b 100%);
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+}
+
+.sectionbutton button:hover::before{
+    width: 9em;
+}
+
+.page-transition {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.dark-mode{
+    background-color: #2e2d2d;
+    color: white;
+}
+
+#theme{
+    position: fixed;
+    /* top: 15px;
+    right: 15px; */
+    font-size: 20px;
+    background-color: #828afe;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 40px;
+    text-align: center;
+    cursor: pointer;
+    transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.fa-sun{
+    transform: rotate(-180deg);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #000000;
+    padding: 10px 20px;
+    /* border-bottom: 1px solid #000000; */
+}
+
+.navbarhome{
+    display: flex;
+    justify-content: space-between;
+    
+    margin-bottom: 10px;
+    color: #000000;
+    
+}
+
+.iconhead{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row;
+}
+
+.iconhead p{
+    margin-left: 10px;
+    margin-bottom: 0px;
+}
+
+.videodetect {
+    display: flex;
+    align-items: flex-start;
+    /* justify-content: center; */
+}
+  
+.videodetect img {
+    margin-left: 15px;
+    border-radius: 10px;
+    width: 67%;
+}
+  
+#result-frame {
+    border: 1px solid #333;
+    padding: 10px;
+    width: 80%;
+    margin-left: 20px;
+    border-radius: 10px;
+    margin-right: 15px;
+}
+
+.home-button{
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    font-size: 10px;
+    color: #FFF;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 12px;
+    margin-right: 15px;
+    
+}
+
+.home-button a{
+    color: #FFF;
+}
+
+.home-button::after{
+    content: "" ;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    /* background-color: #333; */
+}
+
+.home-button::before{
+    content: "";
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+    opacity: 0;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+.home-button:focus::before{
+    opacity: 1;
+}
+
+.home-button:focus:after{
+    background: transparent;
+}
+
+.home-button:focus {
+    color: #000;
+    font-weight: bold;
+  }
+  
+body {
+    background-color: #fff;
+    color: #333;
+    transition: all 0.5s ease-in-out;
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+.home-button {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark-mode .home-button {
+    background-color: #fff;
+    color: #333;
+}
+
+body.dark-mode .home-button a {
+    background-color: #fff;
+    color: #333;
+}
+
+body.dark-mode #result-frame {
+    border: 1px solid #fff;
+}
+
+.dark-mode .fa-sun {
+    color: #fff;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 9999;
+    opacity: 85%;
+}
+
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.popup-content h2 {
+    margin-top: 0;
+}
+
+.popup-content p {
+    margin-bottom: 0;
+}
+
+.popup-exit {
+    position: absolute;
+    top: 0px;
+    right: 5px;
+}
+
+.dark-mode .popup-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color:  #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: #333;
 }

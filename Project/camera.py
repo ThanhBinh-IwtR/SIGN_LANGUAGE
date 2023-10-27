@@ -4,7 +4,7 @@ import numpy as np
 from style_mediapipe import  draw_styled_landmarks,extract_keypoints
 from Transformers_Landmark import get_model,predict
 model = get_model()
-model.load_weights('weight/model.h5')
+model.load_weights('./Project/weight/model.h5')
 # Khởi tạo Holistic
 cap = cv2.VideoCapture(0)
 sequence =  []
