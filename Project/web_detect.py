@@ -61,5 +61,5 @@ def predict_video(file_path,num_frame_space = 30):
         cv2.destroyAllWindows()
         print('===Xon=g')
         yield ''.join(all_res)
-for res in predict_video("D:/AI/DPLS2L/S2L/Project/18s.mp4"):
-    print('DAY LA YEILD KET QUA : ', res)   
+# for res in predict_video("D:/AI/DPLS2L/S2L/Project/18s.mp4"):
+#     print('DAY LA YEILD KET QUA : ', res)   
