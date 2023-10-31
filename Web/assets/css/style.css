@@ -1050,12 +1050,16 @@ form .status i {
     /* justify-content: center; */
 }
   
-.videodetect img {
+.videodetect video {
     margin-left: 15px;
     border-radius: 10px;
-    width: 67%;
+    
 }
-  
+
+.flipped-video {
+    transform: scaleX(-1);
+}
+
 #result-frame {
     border: 1px solid #333;
     padding: 10px;

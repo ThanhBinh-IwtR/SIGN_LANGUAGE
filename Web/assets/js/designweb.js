@@ -14,12 +14,15 @@ themeToggle.onclick = () => {
 
 
 
-//height of textarea
-window.addEventListener('load', function() {
-    var img = document.getElementById('detect-img');
-    var frame = document.getElementById('result-frame');
-    frame.style.height = img.clientHeight + 'px';
-});
+//height of box
+window.onload = function() {
+    var video = document.getElementById('video');
+    var resultFrame = document.getElementById('result-frame');
+
+    video.onloadedmetadata = function() {
+        resultFrame.style.height = video.offsetHeight + 'px';
+    };
+};
 
 //popup
 const guideButton = document.querySelector('.home-button:nth-child(2)');
