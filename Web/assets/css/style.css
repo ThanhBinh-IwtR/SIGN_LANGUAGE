@@ -46,7 +46,7 @@ A. Basic Styling
 
 body {
     background-color: white;
-    /* color: #333; */
+    /* color: #001219; */
     transition: all 0.5s ease-in-out;
     overflow-x: hidden;
 }
@@ -1049,8 +1049,21 @@ form .status i {
     align-items: flex-start;
     /* justify-content: center; */
 }
-  
-.videodetect video {
+
+.videodetect textarea {
+    resize: none !important;
+}
+
+#result-textarea{
+    border: 1px solid #001219;
+    padding: 10px;
+    width: 80%;
+    margin-left: 20px;
+    border-radius: 10px;
+    margin-right: 15px;
+}
+
+.videodetect img {
     margin-left: 15px;
     border-radius: 10px;
     
@@ -1061,7 +1074,7 @@ form .status i {
 }
 
 #result-frame {
-    border: 1px solid #333;
+    border: 1px solid #001219;
     padding: 10px;
     width: 80%;
     margin-left: 20px;
@@ -1074,7 +1087,7 @@ form .status i {
     border: none;
     outline: none;
     font-size: 10px;
-    color: #FFF;
+    color: #fff;
     cursor: pointer;
     position: relative;
     z-index: 0;
@@ -1096,7 +1109,7 @@ form .status i {
     width: 100%;
     height: 100%;
     border-radius: 10px;
-    /* background-color: #333; */
+    /* background-color: #001219; */
 }
 
 .home-button::before{
@@ -1137,32 +1150,33 @@ form .status i {
   
 body {
     background-color: #fff;
-    color: #333;
+    color: #001219;
     transition: all 0.5s ease-in-out;
 }
 
 body.dark-mode {
-    background-color: #333;
+    background-color: #001219;
     color: #fff;
 }
 
 .home-button {
-    background-color: #333;
+    background-color: #001219;
     color: #fff;
 }
 
 body.dark-mode .home-button {
     background-color: #fff;
-    color: #333;
+    color: #001219;
 }
 
 body.dark-mode .home-button a {
     background-color: #fff;
-    color: #333;
+    color: #001219;
 }
 
-body.dark-mode #result-frame {
+body.dark-mode #result-textarea {
     border: 1px solid #fff;
+    background-color: #001219;
 }
 
 .dark-mode .fa-sun {
@@ -1177,7 +1191,7 @@ body.dark-mode #result-frame {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
     z-index: 9999;
-    opacity: 85%;
+    opacity: 100%;
 }
 
 .popup-content {
@@ -1214,5 +1228,9 @@ body.dark-mode #result-frame {
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    color: #333;
+    color: #001219;
+}
+
+.backgr{
+    background-color: #2e2d2d;
 }
