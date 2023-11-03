@@ -15,14 +15,20 @@ themeToggle.onclick = () => {
 
 
 //height of box
-window.onload = function() {
-    var video = document.getElementById('video');
-    var resultFrame = document.getElementById('result-frame');
+window.addEventListener('load', function() {
 
-    video.onloadedmetadata = function() {
-        resultFrame.style.height = video.offsetHeight + 'px';
-    };
-};
+  var img = document.getElementById('video-img');
+  var textarea = document.getElementById('result-textarea');
+
+  var imgHeight = img.clientHeight;
+  textarea.style.height = (imgHeight ) + 'px'; 
+
+  // Cập nhật chiều cao của <textarea> khi kích thước cửa sổ thay đổi
+  window.addEventListener('resize', function() {
+      imgHeight = img.clientHeight;
+      textarea.style.height = (imgHeight ) + 'px'; 
+  });
+});
 
 //popup
 const guideButton = document.querySelector('.home-button:nth-child(2)');

@@ -8,6 +8,10 @@ model.load_weights('./Project/weight/model.h5')
 # Khởi tạo Holistic
 start = predict(model,np.load('./Project/statics/start_up.npy'))
 preprocess = PreprocessLayer()
+sequence =  []
+all_res = []
+res = ''
+n_frame = 0
 print('Completed model loading !')
 def reset_all(res,sequence_arr):
     res += predict(model,sequence_arr)
