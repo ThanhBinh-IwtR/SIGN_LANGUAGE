@@ -24,31 +24,7 @@
             </div>       
         </div>
 
-        <div class="col-lg-8 d-flex justify-content-center align-items-center">
-            <div class="button-container">
-                <a href="/">
-                    <button class="home-button">
-                        <i class="fa-solid fa-house"></i>
-                        Home
-                    </button>
-                    
-                </a>
-                    
-                
-                <button class="home-button">
-                    <i class="fa-solid fa-book"></i>
-                    Guide
-                </button>
-                <button class="home-button">
-                    <i class="fa-solid fa-folder"></i>
-                    Import
-                </button>
-                <button class="home-button">
-                    <i class="fa-solid fa-broom-ball"></i>
-                    Clean
-                </button>
-            </div>
-        </div>
+        
 
         <div class="col-lg-1 d-flex justify-content-end align-items-center">
             
@@ -68,17 +44,72 @@
         </div>
         
     </div>
+    
 
-    <div class="backgr">
-        <div class="videodetect">
-            <!-- <video id="video" class="flipped-video" autoplay style="width: 100%"></video> -->
-            <img  id="video-img"  src="{{ url_for('video_feed') }}" class="flipped-video" autoplay style="width: 100%">
-            <textarea readonly name="translate" id="result-textarea" cols="30" rows="25"></textarea>
-            <!-- <img id="detect-img" src="assets/img/maxresdefault.jpg" style="width: 70%;" alt=""> -->
-            <!-- <div id="result-frame">
-            </div> -->
+
+    <!-- <div class="container"> -->
+    <div class="videodetect">
+        <div class="row">
+            <div class="col-lg-7 d-flex" style="align-items: flex-start;">
+                <!-- <video id="user-uploaded-video" autoplay style="width: 100%;display: none;"></video> -->
+                
+                <img  id="video-img"  src="{{ url_for('video_feed') }}" class="flipped-video" autoplay style="width: 100%">
+            </div>  
+            <div class="col-lg-5 d-flex flex-column align-items-center">
+                <div class="d-flex" style="justify-content: center; margin-bottom: 10px; margin-left: 7px;">
+                    <div class="button-container">
+                        <a href="/">
+                            <button class="home-button">
+                                <i class="fa-solid fa-house"></i>
+                                Home
+                            </button>
+                            
+                        </a>
+                            
+                        
+                        <button class="home-button">
+                            <i class="fa-solid fa-book"></i>
+                            Guide
+                        </button>
+                        <button class="home-button"  data-toggle="modal" data-target="#importModal">
+                            <i class="fa-solid fa-folder"></i>
+                            Import
+                        </button>
+                        <button id="clear-button" class="home-button" style="margin-right: 0px;">
+                            <i class="fa-solid fa-broom-ball"></i>
+                            Clean
+                        </button>
+                    </div>
+                </div>
+                <textarea readonly name="translate" id="result-textarea" cols="30" rows="25"></textarea>
+            </div>      
+        </div>
+        <!-- <video id="video" class="flipped-video" autoplay style="width: 100%"></video> -->
+        <!-- <img id="detect-img" src="assets/img/maxresdefault.jpg" style="width: 70%;" alt=""> -->
+        <!-- <div id="result-frame">
+        </div> -->
+    </div>
+    <!-- </div> -->
+
+
+    <div class="modal fade" id="importModal" tabindex="-1" role="dialog" aria-labelledby="importModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header"  style="padding: 20px 20px;">
+                    <h5 class="modal-title" id="importModalLabel"><span>Import Video</span></h5>
+                </div>
+                <div class="modal-body" style="padding: 0px 20px; font-size: 1.5rem; text-align: center;">
+                    <!-- <input type="file" id="file-input" accept="video/*"> -->
+                    <p>Tính năng này đang trong giai đoạn phát triển và sẽ cập nhật sau</p>
+                </div>
+                <!-- <div class="modal-footer">
+                    <button type="button" class="import btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="import btn btn-primary" id="upload-button" style="margin-top: 0px;">Upload</button>
+                </div> -->
+            </div>
         </div>
     </div>
+    
     
 <script  src="assets/js/jquery-2.2.1.min.js"></script>
 <script  src="assets/bootstrap/js/bootstrap.min.js"></script>
