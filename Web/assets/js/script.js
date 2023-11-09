@@ -118,16 +118,44 @@ function pollForResults() {
         };
 
         xhr.send();
-    }, 2000);  // Cập nhật kết quả mỗi giây (hoặc thời gian cần thiết)
+    }, 2000);  //update result every 2 seconds
 }
 
 pollForResults();
-// Poll for the latest result every 2 seconds (adjust the interval as needed)
-// setInterval(updateResults, 2000);
-// $(document).ready(function() {
-//     setInterval(function() {
-//         $.get("/get_latest_result", function(data) {
-//             $("#result").val(data.result);
-//         });
-//     }, 2000);  // Update every 2 seconds
-// });
+
+//clear result
+document.getElementById('clear-button').addEventListener('click', function() {
+    fetch('/clear_all_res', {method: 'POST'})
+    .then(response => response.json())
+    .then(data => {
+        if (data.result === 'success') {
+            document.getElementById('result-textarea').value = '';
+        }
+    });
+});
+
+//import video
+var uploadPath = window.location.origin + '/uploads/';
+document.getElementById('upload-button').addEventListener('click', function() {
+    var file = document.getElementById('file-input').files[0];
+    var formData = new FormData();
+    formData.append('file', file);
+    fetch('/upload', { method: 'POST', body: formData })
+        .then(response => response.json())
+        .then(data => {
+            if (data.result === 'success') {
+                // The file was successfully uploaded and you can use the filename here
+                var filename = data.filename;
+                // Change the source of the video element to play the uploaded video
+                var userUploadedVideo = document.getElementById('user-uploaded-video');
+                userUploadedVideo.src = uploadPath + filename;
+                userUploadedVideo.style.display = 'block'; 
+
+                
+                var videoFeed = document.getElementById('video-img');
+                videoFeed.style.display = 'none'; 
+            }
+        });
+});
+
+

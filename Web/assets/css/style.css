@@ -1,49 +1,3 @@
-/*----------------------------------------------------------------------------------------------------------------------
-Project:	    CreaSoon
-Version:        1.0.0
-
-Default Color   #000;
-
-Body copy:		'Monsterat', sans-serif; 14px;
-Headers:		'Monsterat', sans-serif;
-
-----------------------------------------------------------------------------------------------------------------------*/
-
-/*----------------------------------------------------------------------------------------------------------------------
-[Table of contents]
-
-A. Basic Styling
-  -- Styling
-
-B. Helpers
-  -- Animations
-  -- Universal Classes
-
-C. Components
-  -- Background
-  -- Box
-  -- Content wrapper
-  -- Count-down
-  -- Footer
-  -- Forms
-  -- Header
-  -- Magnific popup
-  -- Map
-  -- Modal
-  -- Page wrapper
-  -- Parallax
-  -- Person
-  -- Skill
-  -- Social icons
-  -- Work;
-
-----------------------------------------------------------------------------------------------------------------------*/
-
-/***********************************************************************************************************************
-A. Basic Styling
-***********************************************************************************************************************/
-
-
 body {
     background-color: white;
     /* color: #001219; */
@@ -1000,7 +954,7 @@ form .status i {
     /* top: 15px;
     right: 15px; */
     font-size: 20px;
-    background-color: #828afe;
+    background-color: #efefef;
     width: 40px;
     height: 40px;
     line-height: 40px;
@@ -1016,11 +970,10 @@ form .status i {
 .navbar {
     display: flex;
     justify-content: space-between;
-    margin-top: 10px;
     margin-bottom: 10px;
     color: #000000;
     padding: 10px 20px;
-    /* border-bottom: 1px solid #000000; */
+    border-bottom: 1px solid #000000;
 }
 
 .navbarhome{
@@ -1045,8 +998,8 @@ form .status i {
 }
 
 .videodetect {
-    display: flex;
-    align-items: flex-start;
+    /* display: flex;
+    align-items: flex-start; */
     /* justify-content: center; */
 }
 
@@ -1064,7 +1017,7 @@ form .status i {
 }
 
 .videodetect img {
-    margin-left: 15px;
+    margin-left: 40px;
     border-radius: 10px;
     
 }
@@ -1151,37 +1104,46 @@ form .status i {
 body {
     background-color: #fff;
     color: #001219;
-    transition: all 0.5s ease-in-out;
+    /* transition: all 0.5s ease-in-out; */
 }
 
 body.dark-mode {
-    background-color: #001219;
+    background-color: #131417;
     color: #fff;
+    transition: all 0.5s ease-in-out;
 }
 
 .home-button {
-    background-color: #001219;
+    background-color: #131417;
     color: #fff;
 }
 
 body.dark-mode .home-button {
     background-color: #fff;
-    color: #001219;
+    color: #131417;
+    transition: all 0.5s ease-in-out;
 }
 
 body.dark-mode .home-button a {
     background-color: #fff;
-    color: #001219;
+    color: #131417;
+    
 }
 
 body.dark-mode #result-textarea {
     border: 1px solid #fff;
-    background-color: #001219;
+    background-color: #131417;
+    transition: all 0.5s ease-in-out;
 }
 
-.dark-mode .fa-sun {
-    color: #fff;
+body.dark-mode .navbar{
+    background-color: #222221;
+    transition: all 0.5s ease-in-out;
 }
+
+/* .dark-mode .fa-sun {
+    color: #fff;
+} */
 
 .popup {
     position: fixed;
@@ -1231,6 +1193,10 @@ body.dark-mode #result-textarea {
     color: #001219;
 }
 
-.backgr{
-    background-color: #2e2d2d;
+.modal-footer button{
+    border-radius: 12px ;
+}
+
+.modal-title span{
+    font-size: 2.3rem;
 }

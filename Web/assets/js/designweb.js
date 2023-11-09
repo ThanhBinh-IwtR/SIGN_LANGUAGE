@@ -21,14 +21,15 @@ window.addEventListener('load', function() {
   var textarea = document.getElementById('result-textarea');
 
   var imgHeight = img.clientHeight;
-  textarea.style.height = (imgHeight ) + 'px'; 
+  textarea.style.height = (imgHeight - 45) + 'px'; 
 
   // Cập nhật chiều cao của <textarea> khi kích thước cửa sổ thay đổi
   window.addEventListener('resize', function() {
       imgHeight = img.clientHeight;
-      textarea.style.height = (imgHeight ) + 'px'; 
+      textarea.style.height = (imgHeight - 45 ) + 'px'; 
   });
 });
+
 
 //popup
 const guideButton = document.querySelector('.home-button:nth-child(2)');

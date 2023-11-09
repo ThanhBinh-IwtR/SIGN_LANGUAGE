@@ -1,6 +1,7 @@
 #import libraries
 
-from flask import Flask, render_template,Response, jsonify, request
+from flask import Flask, render_template,Response, jsonify, request, send_from_directory
+from werkzeug.utils import secure_filename
 import cv2
 # from style_mediapipe import  draw_styled_landmarks,extract_keypoints, draw_lip
 import mediapipe as mp
@@ -11,6 +12,7 @@ import sys
 # current_dir = os.path.dirname(os.path.abspath(__file__))
 # web_detect_dir = os.path.join(current_dir, 'web_detect')
 sys.path.insert(0, "D:/AI/DPLS2L/S2L/Project")
+# import web_detect
 import style_mediapipe
 import Transformers_Landmark
 # ---------------------------------- init ---------------------------------- 
@@ -23,14 +25,22 @@ all_res = []
 n_frame = 0
 
 print('Completed model loading !')
-# # ---------------------------------- init ---------------------------------- 
+# ---------------------------------- init ---------------------------------- 
 
+ALLOWED_EXTENSIONS = {'mp4', 'avi'}
 
 app = Flask(__name__, static_folder='assets')
-# all_res = []  
+UPLOAD_FOLDER = 'upload'
+ALLOWED_EXTENSIONS = {'mp4', 'avi'}
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
-# res = ''
+
+def allowed_file(filename):
+    return '.' in filename and \
+           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
 current_result = ""
+
 
 def reset_all(res,sequence_arr):
     res += Transformers_Landmark.predict(model,sequence_arr)
@@ -47,6 +57,7 @@ camera = cv2.VideoCapture(0)
 def generate_frames():
     global all_res
     global n_frame
+    global current_result
     res = ''
     num_frame_space = 30
     sequence =[]
@@ -98,16 +109,6 @@ def generate_frames():
                 yield (b'--frame\r\n'
                     b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
 
-    
-#     return frame
-# def yield_live():
-#     global all_res
-#     global n_frame
-#     if n_frame == 128:
-#         yield ''.join(all_res)
-
-# # for res in yield_live():
-            
 @app.route("/")
 def main():
     return render_template("home.html")
@@ -115,10 +116,14 @@ def main():
 @app.route("/detect")
 def detect():
     return render_template("detect.html", current_result=current_result)
+
 # @app.route("/")
 # def detect():
 #     return render_template("detect.html")
-
+# @app.route("/", defaults={'filename': None})
+# @app.route("/<filename>")
+# def detect(filename):
+#     return render_template("detect.html", filename=filename)
 
 @app.route('/get_latest_result')
 def get_latest_result():
@@ -126,8 +131,29 @@ def get_latest_result():
     result = ''.join(all_res)
     return jsonify({'result': result})
 
+@app.route('/clear_all_res', methods=['POST'])
+def clear_all_res():
+    global all_res
+    all_res = []
+    return jsonify({'result': 'success'})
 
+@app.route('/uploads/<filename>')
+def upload(filename):
+    return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
 
+@app.route('/upload', methods=['POST'])
+def upload_file():
+    if 'file' not in request.files:
+        return jsonify({'result': 'failure', 'error': 'No file part'})
+    file = request.files['file']
+    if file.filename == '':
+        return jsonify({'result': 'failure', 'error': 'No selected file'})
+    if file and allowed_file(file.filename):
+        filename = secure_filename(file.filename)
+        file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+        file.save(file_path)
+        return jsonify({'result': 'success', 'filename': filename})
+    return jsonify({'result': 'failure', 'error': 'File not allowed'})
 
 
 @app.route('/video_feed')
